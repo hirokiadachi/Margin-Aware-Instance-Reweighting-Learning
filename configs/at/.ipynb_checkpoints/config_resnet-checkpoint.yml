@@ -1,0 +1,26 @@
+training:
+    # training setting
+    model_type: 'ResNet'
+    training_type: 'at'
+    epochs: 100
+    batch_size: 128
+    learning_rate: 0.01
+    momentum: 0.9
+    weight_decay: 0.0035
+    burn_in_period: 1
+    scheduler:
+        - 75
+        - 90
+    num_classes: 10
+    lower: 0
+    upper: 1
+    # hyper-parameters for reweighting
+    probabilistic_margin: 'nat'
+    gamma: 30.0
+    beta: -0.07
+    # PGD setting
+    epsilon: 8
+    alpha: 2
+    num_iters: 10
+    
+    
